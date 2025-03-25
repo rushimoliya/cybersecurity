@@ -1,0 +1,31 @@
+import re
+
+# Sample log entry (Replace this with your actual logs)
+log_entry = "03/18-09:10:16.918779  [**] [1:1000003:0] Testing TCP alert [**] [Priority: 0] {TCP} 13.107.246.68:443 -> 192.168.0.106:56039"
+
+# Regex pattern to extract timestamp
+timestamp_pattern = r'(\d{2}/\d{2}-\d{2}:\d{2}:\d{2}\.\d+)'
+timestamp_match = re.search(timestamp_pattern, log_entry)
+
+if timestamp_match:
+    print(f"✅ Extracted Timestamp: {timestamp_match.group()}")
+else:
+    print("❌ Timestamp not found! Check your regex.")
+
+# Regex pattern to extract attack ID
+attack_id_pattern = r'\[1:(\d+):\d+\]'
+attack_id_match = re.search(attack_id_pattern, log_entry)
+
+if attack_id_match:
+    print(f"✅ Extracted Attack ID: {attack_id_match.group(1)}")
+else:
+    print("❌ Attack ID not found!")
+
+# Regex pattern to extract priority
+priority_pattern = r'\[Priority: (\d+)\]'
+priority_match = re.search(priority_pattern, log_entry)
+
+if priority_match:
+    print(f"✅ Extracted Priority: {priority_match.group(1)}")
+else:
+    print("❌ Priority not found!")
