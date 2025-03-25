@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Cybersecurity Platform{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+        <div class="card shadow">
+            <div class="card-body p-5">
+                <h2 class="text-center mb-4">Login</h2>
+                <form method="POST" action="{{ url_for('login') }}" id="loginForm" novalidate>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" 
+                               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                               required>
+                        <div class="invalid-feedback">
+                            Please enter a valid email address (e.g., user@example.com)
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                        <div class="invalid-feedback">
+                            Please enter your password
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <div class="text-center my-3">
+                            <span class="text-muted">OR</span>
+                        </div>
+                        <a href="{{ url_for('google.login') }}" class="btn btn-outline-dark">
+                            <img src="{{ url_for('static', filename='images/google-icon.svg') }}" alt="Google" width="20" height="20" class="me-2">
+                            Sign in with Google
+                        </a>
+                    </div>
+                </form>
+                <div class="text-center mt-4">
+                    <p class="mb-0">Don't have an account? <a href="{{ url_for('signup') }}">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    if (!this.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+    this.classList.add('was-validated');
+});
+
+// Real-time email validation
+document.getElementById('email').addEventListener('input', function() {
+    if (this.value.indexOf('@') === -1) {
+        this.setCustomValidity('Email must contain @');
+    } else if (!this.value.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/)) {
+        this.setCustomValidity('Please enter a valid email address');
+    } else {
+        this.setCustomValidity('');
+    }
+});
+</script>
+{% endblock %} 

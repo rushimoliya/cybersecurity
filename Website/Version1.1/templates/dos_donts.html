@@ -1,0 +1,522 @@
+{% extends "base.html" %}
+
+{% block title %}Dos & Don'ts - Cybersecurity Platform{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="hero-section">
+        <h1>Cybersecurity Dos & Don'ts</h1>
+        <p class="hero-subtitle">Essential guidelines to keep your digital life secure</p>
+    </div>
+
+    <div class="dos-donts-container">
+        <!-- Dos Section -->
+        <div class="section-card dos-section">
+            <h2>Dos ✅</h2>
+            <ul class="dos-list">
+                <li>
+                    <div class="list-icon">✓</div>
+                    <div class="list-content">
+                        <h4>Use Strong Passwords</h4>
+                        <p>Create complex passwords with a mix of letters, numbers, and symbols</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-icon">✓</div>
+                    <div class="list-content">
+                        <h4>Enable Two-Factor Authentication</h4>
+                        <p>Add an extra layer of security to your accounts</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-icon">✓</div>
+                    <div class="list-content">
+                        <h4>Keep Software Updated</h4>
+                        <p>Regularly update your operating system and applications</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-icon">✓</div>
+                    <div class="list-content">
+                        <h4>Use Secure Networks</h4>
+                        <p>Connect only to trusted and encrypted Wi-Fi networks</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-icon">✓</div>
+                    <div class="list-content">
+                        <h4>Backup Important Data</h4>
+                        <p>Regularly backup your important files to secure locations</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Don'ts Section -->
+        <div class="section-card donts-section">
+            <h2>Don'ts ❌</h2>
+            <ul class="donts-list">
+                <li>
+                    <div class="list-icon">✕</div>
+                    <div class="list-content">
+                        <h4>Share Sensitive Information</h4>
+                        <p>Never share passwords or personal data through unsecured channels</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-icon">✕</div>
+                    <div class="list-content">
+                        <h4>Click Unknown Links</h4>
+                        <p>Avoid clicking on suspicious links in emails or messages</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-icon">✕</div>
+                    <div class="list-content">
+                        <h4>Use Public Computers</h4>
+                        <p>Don't access sensitive accounts on public or shared computers</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-icon">✕</div>
+                    <div class="list-content">
+                        <h4>Ignore Security Warnings</h4>
+                        <p>Take all security alerts and warnings seriously</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-icon">✕</div>
+                    <div class="list-content">
+                        <h4>Download Unknown Software</h4>
+                        <p>Avoid downloading software from untrusted sources</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Attacks Section -->
+    <div class="attacks-section">
+        <h2>Common Cybersecurity Attacks</h2>
+        <div class="attacks-grid">
+            <div class="attack-card">
+                <div class="attack-icon">🎣</div>
+                <div class="attack-content">
+                    <h3>Phishing Attacks</h3>
+                    <p>Deceptive attempts to steal sensitive information by posing as legitimate entities through emails, messages, or fake websites.</p>
+                    <ul class="attack-points">
+                        <li>Fake login pages</li>
+                        <li>Urgent action requests</li>
+                        <li>Suspicious attachments</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="attack-card">
+                <div class="attack-icon">🔒</div>
+                <div class="attack-content">
+                    <h3>Ransomware</h3>
+                    <p>Malicious software that encrypts your files and demands payment for decryption.</p>
+                    <ul class="attack-points">
+                        <li>File encryption</li>
+                        <li>Payment demands</li>
+                        <li>System lockouts</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="attack-card">
+                <div class="attack-icon">👥</div>
+                <div class="attack-content">
+                    <h3>Social Engineering</h3>
+                    <p>Psychological manipulation to trick users into revealing confidential information.</p>
+                    <ul class="attack-points">
+                        <li>Impersonation</li>
+                        <li>Pretexting</li>
+                        <li>Baiting</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="attack-card">
+                <div class="attack-icon">🌐</div>
+                <div class="attack-content">
+                    <h3>Man-in-the-Middle</h3>
+                    <p>Intercepting communications between two parties to steal data or inject malicious content.</p>
+                    <ul class="attack-points">
+                        <li>Network eavesdropping</li>
+                        <li>Data interception</li>
+                        <li>Connection hijacking</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="attack-card">
+                <div class="attack-icon">🦠</div>
+                <div class="attack-content">
+                    <h3>Malware</h3>
+                    <p>Malicious software designed to damage or gain unauthorized access to computer systems.</p>
+                    <ul class="attack-points">
+                        <li>Viruses and worms</li>
+                        <li>Trojans and spyware</li>
+                        <li>Keyloggers</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="attack-card">
+                <div class="attack-icon">🌊</div>
+                <div class="attack-content">
+                    <h3>DDoS Attacks</h3>
+                    <p>Overwhelming servers or networks with massive traffic to make them unavailable to users.</p>
+                    <ul class="attack-points">
+                        <li>Traffic flooding</li>
+                        <li>Service disruption</li>
+                        <li>Bandwidth consumption</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="attack-card">
+                <div class="attack-icon">💉</div>
+                <div class="attack-content">
+                    <h3>SQL Injection</h3>
+                    <p>Inserting malicious SQL code to manipulate databases and steal sensitive information.</p>
+                    <ul class="attack-points">
+                        <li>Database manipulation</li>
+                        <li>Data theft</li>
+                        <li>Authentication bypass</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="attack-card">
+                <div class="attack-icon">🔨</div>
+                <div class="attack-content">
+                    <h3>Brute Force Attacks</h3>
+                    <p>Systematically attempting all possible passwords or encryption keys until finding the correct one.</p>
+                    <ul class="attack-points">
+                        <li>Password cracking</li>
+                        <li>Dictionary attacks</li>
+                        <li>Credential stuffing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Tips Section -->
+    <div class="additional-tips">
+        <h2>Additional Security Tips</h2>
+        <div class="tips-grid">
+            <div class="tip-card">
+                <div class="tip-icon">🔒</div>
+                <h3>Password Management</h3>
+                <ul>
+                    <li>Use a password manager</li>
+                    <li>Change passwords regularly</li>
+                    <li>Don't reuse passwords</li>
+                </ul>
+            </div>
+            <div class="tip-card">
+                <div class="tip-icon">📱</div>
+                <h3>Mobile Security</h3>
+                <ul>
+                    <li>Lock your devices</li>
+                    <li>Install security apps</li>
+                    <li>Be careful with app permissions</li>
+                </ul>
+            </div>
+            <div class="tip-card">
+                <div class="tip-icon">💻</div>
+                <h3>Online Safety</h3>
+                <ul>
+                    <li>Use VPN when necessary</li>
+                    <li>Check website security</li>
+                    <li>Monitor account activity</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #666666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.dos-donts-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.section-card {
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.section-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.dos-list, .donts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dos-list li, .donts-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.dos-list li:hover, .donts-list li:hover {
+    transform: translateX(5px);
+    border-color: #000000;
+}
+
+.list-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+}
+
+.dos-list .list-icon {
+    background-color: rgba(52, 211, 153, 0.1);
+    color: #34D399;
+}
+
+.donts-list .list-icon {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #EF4444;
+}
+
+.list-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #000000;
+}
+
+.list-content p {
+    font-size: 0.95rem;
+    color: #666666;
+    margin: 0;
+}
+
+.additional-tips {
+    margin-top: 4rem;
+}
+
+.additional-tips h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.tip-card {
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    border-color: #000000;
+}
+
+.tip-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.tip-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.tip-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tip-card ul li {
+    margin-bottom: 0.5rem;
+    color: #666666;
+    font-size: 0.95rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.tip-card ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #000000;
+}
+
+.attacks-section {
+    margin: 4rem 0;
+}
+
+.attacks-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #000000;
+}
+
+.attacks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.attack-card {
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.attack-card:hover {
+    transform: translateY(-5px);
+    border-color: #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.attack-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.attack-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.attack-content p {
+    color: #666666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.attack-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.attack-points li {
+    margin-bottom: 0.5rem;
+    color: #666666;
+    font-size: 0.95rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.attack-points li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #000000;
+}
+
+@media (max-width: 992px) {
+    .dos-donts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-section {
+        padding: 2rem 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .section-card {
+        padding: 1.5rem;
+    }
+
+    .tip-card {
+        padding: 1.5rem;
+    }
+
+    .attacks-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .attacks-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .attack-card {
+        padding: 1.5rem;
+    }
+}
+</style>
+{% endblock %}

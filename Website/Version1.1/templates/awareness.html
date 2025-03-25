@@ -1,0 +1,463 @@
+{% extends "base.html" %}
+
+{% block title %}Cybersecurity Awareness - Cybersecurity Platform{% endblock %}
+
+{% block content %}
+<div class="awareness-container">
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Cybersecurity Awareness</h1>
+            <p class="hero-subtitle">Empowering you with knowledge to stay safe in the digital world</p>
+            
+            <div class="pdf-download-card">
+                <div class="pdf-content">
+                    <h3>Cybersecurity Guide</h3>
+                    <p>Download our comprehensive guide to cybersecurity best practices</p>
+                    <div class="download-section">
+                        <div class="pdf-icon-wrapper">
+                            <img src="{{ url_for('static', filename='images/pdf-icon.svg') }}" alt="PDF Icon" class="pdf-icon">
+                        </div>
+                        <a href="{{ url_for('static', filename='Introduction.pdf') }}" class="download-btn" download>
+                            <span class="download-icon">↓</span>
+                            Download PDF Guide
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content-grid">
+        <!-- Key Topics Section -->
+        <div class="topics-section">
+            <div class="section-card">
+                <h2 class="section-title">Essential Security Topics</h2>
+                <div class="topics-grid">
+                    <!-- Password Security -->
+                    <div class="topic-card">
+                        <div class="topic-icon">🔒</div>
+                        <h3>Password Security</h3>
+                        <ul class="topic-list">
+                            <li>Use unique, complex passwords</li>
+                            <li>Enable two-factor authentication</li>
+                            <li>Regular password updates</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Email Safety -->
+                    <div class="topic-card">
+                        <div class="topic-icon">📧</div>
+                        <h3>Email Safety</h3>
+                        <ul class="topic-list">
+                            <li>Identify phishing attempts</li>
+                            <li>Verify sender authenticity</li>
+                            <li>Don't click suspicious links</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Device Security -->
+                    <div class="topic-card">
+                        <div class="topic-icon">📱</div>
+                        <h3>Device Security</h3>
+                        <ul class="topic-list">
+                            <li>Keep software updated</li>
+                            <li>Use antivirus protection</li>
+                            <li>Enable device encryption</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Online Privacy -->
+                    <div class="topic-card">
+                        <div class="topic-icon">🔐</div>
+                        <h3>Online Privacy</h3>
+                        <ul class="topic-list">
+                            <li>Use VPN on public Wi-Fi</li>
+                            <li>Check privacy settings</li>
+                            <li>Limit personal information sharing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Tips Section -->
+        <div class="tips-section">
+            <div class="section-card">
+                <h2 class="section-title">Quick Security Tips</h2>
+                <div class="tips-list">
+                    <div class="tip-item">
+                        <span class="tip-number">1</span>
+                        <p>Never share passwords or sensitive information via email</p>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-number">2</span>
+                        <p>Use a password manager to generate and store strong passwords</p>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-number">3</span>
+                        <p>Keep your operating system and software up to date</p>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-number">4</span>
+                        <p>Back up your important data regularly</p>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-number">5</span>
+                        <p>Be cautious when using public Wi-Fi networks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.awareness-container {
+    min-height: 100vh;
+    background: #ffffff;
+    color: #2c3e50;
+    padding: 0;
+}
+
+.hero-section {
+    background: #ffffff;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    color: #000000;
+    border: 2px solid #000000;
+    margin: 4rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.hero-section.active {
+    border-color: #3498db;
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.2);
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #000000;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #666666;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.pdf-download-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.pdf-content {
+    text-align: center;
+}
+
+.pdf-content h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.pdf-content p {
+    color: #666666;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.download-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.pdf-icon-wrapper {
+    background: #ffffff;
+    padding: 0.75rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pdf-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #000000;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-decoration: none;
+}
+
+.download-icon {
+    font-size: 1.1rem;
+}
+
+.content-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.section-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.section-card.active {
+    border-color: #3498db;
+    box-shadow: 0 5px 30px rgba(52, 152, 219, 0.15);
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #3498db;
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.topic-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.topic-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.topic-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.topic-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.topic-list li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #6c757d;
+}
+
+.topic-list li:before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+.tips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tip-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.tip-item:hover {
+    transform: translateX(5px);
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.tip-number {
+    background: #3498db;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.tip-item p {
+    margin: 0;
+    color: #6c757d;
+}
+
+@media (max-width: 1200px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 1.5rem;
+        margin: 2rem;
+        border-radius: 20px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .pdf-download-card {
+        margin: 0 1rem;
+        padding: 1.5rem;
+    }
+
+    .download-section {
+        padding: 1rem;
+    }
+
+    .pdf-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .content-grid {
+        padding: 2rem 1rem;
+    }
+    
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-card {
+        padding: 1.5rem;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('.hero-section, .section-card');
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.6
+    };
+
+    const observerCallback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                sections.forEach(section => section.classList.remove('active'));
+                entry.target.classList.add('active');
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    sections.forEach(section => observer.observe(section));
+
+    const setInitialActive = () => {
+        const viewportHeight = window.innerHeight;
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const visible = (rect.top >= 0 && rect.top <= viewportHeight * 0.4);
+            if (visible) {
+                sections.forEach(s => s.classList.remove('active'));
+                section.classList.add('active');
+            }
+        });
+    };
+
+    setInitialActive();
+    window.addEventListener('scroll', setInitialActive);
+});
+</script>
+{% endblock %}
