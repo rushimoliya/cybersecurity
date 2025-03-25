@@ -1,0 +1,14 @@
+Flask
+Flask-WTF
+cryptography
+Flask-SQLAlchemy
+Flask-Login
+email-validator
+python-dotenv
+zxcvbn
+Werkzeug
+requests
+oauthlib
+Flask-OAuthlib
+pyotp
+flask_dance

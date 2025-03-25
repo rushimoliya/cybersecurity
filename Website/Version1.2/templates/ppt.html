@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Educational PPT</h1>
+<p>View or download our cybersecurity presentation.</p>
+<div class="btn-group">
+    <a href="{{ url_for('static', filename='pdf/Educational_ppt.pdf') }}" class="btn btn-primary" download>Download PDF</a>
+    <a href="{{ url_for('download_ppt') }}" class="btn btn-success">Direct Download</a>
+</div>
+<!-- Placeholder for auto-scrolling PPT (add JS later if needed) -->
+{% endblock %}
